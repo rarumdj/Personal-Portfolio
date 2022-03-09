@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: var(--font-family);
+}
+
+body {
+  background: #fff;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+.section-gradient {
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(
+    167deg,
+    rgba(82, 85, 212, 1) 0%,
+    rgba(99, 102, 217, 1) 100%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(
+    167deg,
+    rgba(82, 85, 212, 1) 0%,
+    rgba(99, 102, 217, 1) 100%
+  );
+
+  /* opera 11.10+ */
+  background: -o-linear-gradient(
+    167deg,
+    rgba(82, 85, 212, 1) 0%,
+    rgba(99, 102, 217, 1) 100%
+  );
+
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6366D9', endColorstr='#5255D4', GradientType=1 );
+
+  /* ie 10+ */
+  background: -ms-linear-gradient(
+    167deg,
+    rgba(82, 85, 212, 1) 0%,
+    rgba(99, 102, 217, 1) 100%
+  );
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(
+    167deg,
+    rgba(82, 85, 212, 1) 0%,
+    rgba(99, 102, 217, 1) 100%
+  );
+}
+
+@media screen and (max-width: 766px) {
+  .no-scroll {
+    overflow: hidden;
+  }
+}
