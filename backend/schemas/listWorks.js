@@ -1,11 +1,11 @@
 export default {
-  name: "about",
-  title: "About",
+  name: "listWorks",
+  title: "List Works",
   type: "document",
   fields: [
     {
-      name: "section",
-      title: "Section",
+      name: "title",
+      title: "Title",
       type: "string",
     },
     {
@@ -14,33 +14,38 @@ export default {
       type: "string",
     },
     {
-      name: "listTitle",
-      title: "ListTitle",
+      name: "viewLink",
+      title: "ViewLink",
       type: "string",
     },
     {
-      name: "lists",
-      title: "Lists",
+      name: "gitLink",
+      title: "GitLink",
+      type: "string",
+    },
+    {
+      name: "tags",
+      title: "Tags",
       type: "array",
       of: [
         {
-          name: "list",
-          title: "List",
+          name: "tag",
+          title: "Tag",
           type: "string",
         },
       ],
     },
     {
-      name: "greyImage",
-      title: "GreyImage",
+      name: "image",
+      title: "Image",
       type: "image",
       options: {
         hotspot: true,
       },
     },
     {
-      name: "image",
-      title: "Image",
+      name: "icon",
+      title: "Icon",
       type: "image",
       options: {
         hotspot: true,

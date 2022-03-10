@@ -8,11 +8,7 @@ export default {
       title: "Section",
       type: "string",
     },
-    {
-      name: "year",
-      title: "Year",
-      type: "string",
-    },
+   
     {
       name: "works",
       title: "Works",

@@ -1,71 +1,27 @@
-import React from 'react'
-import { bootstrap, css, figma, git, html, jsimg, laravel, nodejs, php, reactimg, reduxjs, tailwind } from "../assests";
+import React, { useEffect, useState } from "react";
+import { client, urlFor } from "../client";
 
 const Skills = () => {
+  const [stacks, setStacks] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "stacks"]';
+
+    client.fetch(query).then((data) => setStacks(data));
+  }, []);
+
   return (
     <div className="w-full flex justify-center flex-wrap">
-              <div class="p-4 sm:w-1/3">
-                <div className="flex h-20 w-20 rounded-full bg-orange-100">
-                  <img src={html} alt="html" className="m-auto" />
-                </div>
-              </div>
-              <div class="p-4 sm:w-1/3">
-                <div className="flex h-20 w-20 rounded-full bg-blue-50">
-                  <img src={css} alt="css" className="m-auto" />
-                </div>
-              </div>
-              <div class="p-4 sm:w-1/3">
-                <div className="flex h-20 w-20 rounded-full bg-blue-50">
-                  <img src={reactimg} alt="react" className="m-auto" />
-                </div>
-              </div>
-              <div class="p-4 sm:w-1/3">
-                <div className="flex h-20 w-20 rounded-full bg-blue-50">
-                  <img src={jsimg} alt="react" className="m-auto" />
-                </div>
-              </div>
-              <div class="p-4 sm:w-1/3">
-                <div className="flex h-20 w-20 rounded-full bg-blue-50">
-                  <img src={reduxjs} alt="react" className="m-auto" />
-                </div>
-              </div>
-              <div class="p-4 sm:w-1/3">
-                <div className="flex h-20 w-20 rounded-full bg-blue-50">
-                  <img src={git} alt="react" className="m-auto" />
-                </div>
-              </div>
-              <div class="p-4 sm:w-1/3">
-                <div className="flex h-20 w-20 rounded-full bg-blue-50">
-                  <img src={figma} alt="react" className="m-auto" />
-                </div>
-              </div>
-              <div class="p-4 sm:w-1/3">
-                <div className="flex h-20 w-20 rounded-full bg-blue-50">
-                  <img src={php} alt="react" className="m-auto" />
-                </div>
-              </div>
-              <div class="p-4 sm:w-1/3">
-                <div className="flex h-20 w-20 rounded-full bg-blue-50">
-                  <img src={laravel} alt="react" className="m-auto" />
-                </div>
-              </div>
-              <div class="p-4 sm:w-1/3">
-                <div className="flex h-20 w-20 rounded-full bg-blue-50">
-                  <img src={nodejs} alt="react" className="m-auto" />
-                </div>
-              </div>
-              <div class="p-4 sm:w-1/3">
-                <div className="flex h-20 w-20 rounded-full bg-blue-50">
-                  <img src={tailwind} alt="react" className="m-auto" />
-                </div>
-              </div>
-              <div class="p-4 sm:w-1/3">
-                <div className="flex h-20 w-20 rounded-full bg-blue-50">
-                  <img src={bootstrap} alt="react" className="m-auto" />
-                </div>
-              </div>
+      {stacks.map((stack, i) => (
+        <div key={i} className="p-4 sm:w-1/3">
+          <div className="flex h-20 w-20 rounded-full" style={{ background: `${stack.bgColor}` }}>
+            <img src={urlFor(stack.icon)} alt="html" className="m-auto" />
           </div>
-  )
-}
+        </div>
+      ))}
 
-export default Skills
+    </div>
+  );
+};
+
+export default Skills;

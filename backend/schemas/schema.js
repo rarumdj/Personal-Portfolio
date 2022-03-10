@@ -9,6 +9,8 @@ import header from "./header";
 import stacks from "./stacks";
 import workExperience from "./workExperience";
 import works from "./works";
+import listWorks from "./listWorks";
+import footer from "./footer";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -23,5 +25,7 @@ export default createSchema({
     workExperience,
     stacks,
     works,
+    listWorks,
+    footer
   ]),
 });

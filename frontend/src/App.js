@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
+import Social from "./components/Social";
 import About from "./containers/About";
 import Experience from "./containers/Experience";
 import Footer from "./containers/Footer";
@@ -10,7 +11,7 @@ import Work from "./containers/Work";
 function App() {
   return (
     <div className="App">
-      <section className="min-h-screen md:max-h-screen section-gradient">
+      <section className="xl:min-h-full min-h-screen section-gradient">
         <NavBar />
         <Header />
       </section>

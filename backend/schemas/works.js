@@ -9,44 +9,11 @@ export default {
       type: "string",
     },
     {
-      name: "title",
-      title: "Title",
-      type: "string",
-    },
-    {
-      name: "description",
-      title: "Description",
-      type: "string",
-    },
-    {
-      name: "viewLink",
-      title: "ViewLink",
-      type: "string",
-    },
-    {
-      name: "gitLink",
-      title: "GitLink",
-      type: "string",
-    },
-    {
-      name: "tags",
-      title: "Tags",
+      name: "works",
+      title: "Works",
       type: "array",
-      of: [
-        {
-          name: "tag",
-          title: "Tag",
-          type: "string",
-        },
-      ],
+      of: [{ type: "listWorks" }],
     },
-    {
-      name: "icon",
-      title: "Icon",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-    },
+    
   ],
 };
