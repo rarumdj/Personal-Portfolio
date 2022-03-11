@@ -113,7 +113,7 @@ const NavBar = ({ active }) => {
             Say Hello
           </span>
           <ul className="md:text-xl md:leading-loose text-2xl text-blue-600 leading-loose">
-            <li>hello@davidj.dev</li>
+            <li><a href="mailto:davemoses3@gmail.com">davemoses3@gmail.com</a></li>
           </ul>
           <ul className="flex md:hidden flex-row space-x-3">
             <li>
