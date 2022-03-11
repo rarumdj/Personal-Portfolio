@@ -10,9 +10,8 @@ const NavFloat = ({ active }) => {
             <a
               key={links + i}
               href={`#${links.url}`}
-              className={`${
-                active === links.url ? "bg-blue-500" : ""
-              } w-3 h-3 rounded-full bg-gray-300 hover:bg-blue-500 transition-all ease-in-out duration-200`}
+              style={active === links.url ? { backgroundColor: "#313BAC" } : {}}
+              className={`w-3 h-3 rounded-full bg-gray-300 hover:bg-blue-500 transition-all ease-in-out duration-200`}
             />
           ))}
         </div>
