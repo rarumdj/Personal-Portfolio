@@ -9,8 +9,7 @@ import Work from "./containers/Work";
 function App() {
   return (
     <div className="App">
-
-      <section className="xl:min-h-full min-h-screen section-gradient">
+      <section className="xl:h-full xl:min-h-full min-h-screen section-gradient">
         <Header />
       </section>
       <About />

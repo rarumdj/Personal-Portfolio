@@ -19,7 +19,7 @@ const Work = () => {
   return (
     <section
       id="projects"
-      className="px-4 py-12 md:py-24 md:px-24 lg:px-44 xl:min-h-full min-h-screen bg-purple-50"
+      className="px-4 py-12 md:py-24 md:px-24 lg:px-44 xl:h-full lg:min-h-full min-h-screen bg-purple-50"
     >
       {works.map((title) => (
         <motion.h1
