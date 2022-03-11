@@ -1,5 +1,4 @@
 import React from "react";
-import { Assign } from "../assests";
 
 const Social = () => {
   return (
@@ -7,7 +6,11 @@ const Social = () => {
       <div className="flex flex-col w-10 items-center space-y-4">
         <ul className="flex flex-col space-y-2 invert">
           <li>
-            <a href="http://" target="_blank" rel="noopener noreferrer">
+            <a
+              href="http://www.github.com/rarumdj"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 data-name="Layer 1"
@@ -23,7 +26,11 @@ const Social = () => {
             </a>
           </li>
           <li>
-            <a href="http://" target="_blank" rel="noopener noreferrer">
+            <a
+              href="http://www.facebook.com/rarumdj"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 data-name="Layer 1"
@@ -39,7 +46,11 @@ const Social = () => {
             </a>
           </li>
           <li>
-            <a href="http://" target="_blank" rel="noopener noreferrer">
+            <a
+              href="http://www.twitter.com/rarumdj"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 data-name="Layer 1"
@@ -55,7 +66,11 @@ const Social = () => {
             </a>
           </li>
           <li>
-            <a href="http://" target="_blank" rel="noopener noreferrer">
+            <a
+              href="http://www.instagram.com/rarumdj"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 data-name="Layer 1"
@@ -71,7 +86,11 @@ const Social = () => {
             </a>
           </li>
           <li>
-            <a href="http://" target="_blank" rel="noopener noreferrer">
+            <a
+              href="http://www.linkedin.com/in/rarumdj"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 data-name="Layer 1"

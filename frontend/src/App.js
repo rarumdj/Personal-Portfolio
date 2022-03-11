@@ -1,8 +1,6 @@
 import React from "react";
 import "./App.css";
 import Header from "./components/Header";
-import NavBar from "./components/NavBar";
-import Social from "./components/Social";
 import About from "./containers/About";
 import Experience from "./containers/Experience";
 import Footer from "./containers/Footer";

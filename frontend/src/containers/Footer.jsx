@@ -83,7 +83,7 @@ const Footer = () => {
         pauseOnHover
       />
       <motion.div
-        whileHover={{ opacity: [0, 1] }}
+        whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
         className="flex flex-col justify-center items-center py-12 md:py-24 "
       >

@@ -23,7 +23,7 @@ const Work = () => {
     >
       {works.map((title) => (
         <motion.h1
-          whileHover={{ opacity: [0, 1] }}
+          whileInView={{ opacity: [0, 1] }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
           key={title}
           className="sm:px-0 px-4 mb-12 text-left lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-extrabold text-blue-600"
@@ -33,7 +33,7 @@ const Work = () => {
       ))}
 
       <motion.div
-        whileHover={{ opacity: [0, 1] }}
+        whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
         className="grid lg:grid-cols-3 md:grid-cols-2 gap-6"
       >
