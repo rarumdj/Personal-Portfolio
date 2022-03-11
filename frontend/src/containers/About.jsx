@@ -14,19 +14,20 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-12 px-12 md:py-24 md:px-24 lg:px-44 xl:h-full lg:min-h-full min-h-screen"
+      className="py-12 px-12 md:py-24 md:px-24 lg:px-44 xl:h-full lg:h-screen sm:h-full h-screen"
     >
       {about.map((items, i) => (
         <motion.div
           whileInView={{ y: [50, 0] }}
-          transition={{ duration: 0.5, type: "tween"}}
+          transition={{ duration: 0.5, type: "tween" }}
           key={i}
           className="flex md:flex-row flex-col items-center gap-16"
         >
-          <motion.div 
-          whileInView={{ opacity: [0, 1] }}
-          transition={{ duration: 1.5}}
-          className="basis-2/4">
+          <motion.div
+            whileInView={{ opacity: [0, 1] }}
+            transition={{ duration: 1.5 }}
+            className="basis-2/4"
+          >
             <h1 className="mb-12 lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-extrabold text-blue-600">
               {items.section}
             </h1>
