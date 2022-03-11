@@ -12,7 +12,7 @@ const Header = () => {
     client.fetch(query).then((data) => setHeader(data));
   }, []);
   return (
-    <header className="px-12 md:py-24 md:px-24 lg:px-44 ">
+    <header className="px-12 md:py-24 md:px-24 lg:px-44 xl:min-h-full lg:min-h-screen sm:min-h-full min-h-screen">
       <div className="flex flex-col md:flex-row h-full max-w-screen-xl items-center mt-0 mb-12 mx-0 md:m-0">
         {header.map((items, i) => (
           <div key={i} className="flex flex-col w-full py-12">

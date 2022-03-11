@@ -14,7 +14,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-12 px-12 md:py-24 md:px-24 lg:px-44 xl:h-full lg:h-screen sm:h-full h-screen"
+      className="py-12 px-12 md:py-24 md:px-24 lg:px-44 xl:min-h-full lg:min-h-screen sm:min-h-full min-h-screen"
     >
       {about.map((items, i) => (
         <motion.div

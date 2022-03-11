@@ -19,7 +19,7 @@ const Experience = () => {
   return (
     <section
       id="skill"
-      className="px-8 py-12 md:py-24 md:px-24 lg:px-44 xl:h-full lg:h-screen sm:h-full h-screen section-gradient"
+      className="px-8 py-12 md:py-24 md:px-24 lg:px-44 xl:min-h-full lg:min-h-screen sm:min-h-full min-h-screen section-gradient"
     >
       {experiences.map((title) => (
         <motion.h1
