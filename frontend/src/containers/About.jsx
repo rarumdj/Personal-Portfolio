@@ -1,5 +1,7 @@
+import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { client, urlFor } from "../client";
+import { AppWrap, MotionWrap } from "../wrapper";
 
 const About = () => {
   const [about, setAbout] = useState([]);
@@ -15,8 +17,16 @@ const About = () => {
       className="py-12 px-12 md:py-24 md:px-24 lg:px-44 xl:min-h-full min-h-screen"
     >
       {about.map((items, i) => (
-        <div key={i} className="flex md:flex-row flex-col items-center gap-16">
-          <div className="basis-2/4">
+        <motion.div
+          whileInView={{ y: [50, 0] }}
+          transition={{ duration: 0.5, type: "tween"}}
+          key={i}
+          className="flex md:flex-row flex-col items-center gap-16"
+        >
+          <motion.div 
+          whileInView={{ opacity: [0, 1] }}
+          transition={{ duration: 1.5}}
+          className="basis-2/4">
             <h1 className="mb-12 lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-extrabold text-blue-600">
               {items.section}
             </h1>
@@ -27,17 +37,16 @@ const About = () => {
               {items.listTitle}
             </p>
             <ul className="mt-3 grid grid-cols-2 gap-1 lg:text-base text-sm text-purple-900 ">
-               {items.lists.map((list, i) => (
+              {items.lists.map((list, i) => (
                 <li key={i} className="flex flex-nowrap">
-                <span>
-                  <i className="gg-play-button text-purple-900"></i>
-                </span>
-                {list}
-              </li>
-               ))}
-              
+                  <span>
+                    <i className="gg-play-button text-purple-900"></i>
+                  </span>
+                  {list}
+                </li>
+              ))}
             </ul>
-          </div>
+          </motion.div>
           <div className="basis-2/4 flex">
             <div className="group relative">
               <img
@@ -52,10 +61,10 @@ const About = () => {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
       ))}
     </section>
   );
 };
 
-export default About;
+export default AppWrap(MotionWrap(About, ""), "about", "relative", "hidden");

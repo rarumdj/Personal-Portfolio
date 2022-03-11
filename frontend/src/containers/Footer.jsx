@@ -3,6 +3,8 @@ import emailjs, { send } from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { client } from "../client";
+import { AppWrap, MotionWrap } from "../wrapper";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   const success = () =>
@@ -66,6 +68,7 @@ const Footer = () => {
   let footerTxt = {};
   footer.forEach((footertxt) => (footerTxt = footertxt));
 
+  const date = new Date().getFullYear();
   return (
     <div id="contact" className="px-4 md:px-24 lg:px-44">
       <ToastContainer
@@ -79,14 +82,17 @@ const Footer = () => {
         draggable
         pauseOnHover
       />
-      <div className="flex flex-col justify-center items-center py-12 md:py-24 ">
+      <motion.div
+        whileHover={{ opacity: [0, 1] }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className="flex flex-col justify-center items-center py-12 md:py-24 "
+      >
         <div className="flex flex-col justify-center space-y-4 mb-8">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center font-bold text-blue-600">
             {footerTxt.section}
           </h1>
           <p className="lg:text-xl sm:text-sm text-center text-blue-600">
-            {footerTxt.subtext1}{" "}
-            <br className="lg:block hidden" />
+            {footerTxt.subtext1} <br className="lg:block hidden" />
             {footerTxt.subtext2}
           </p>
         </div>
@@ -148,14 +154,14 @@ const Footer = () => {
             </div>
           </form>
         </div>
-      </div>
+      </motion.div>
       <div className="border-t py-6">
         <p className="sm:text-sm text-xs text-gray-500 text-center">
-          © 2022 Designed and Built :: David Johnson
+          © {date} Designed and Built :: David Johnson
         </p>
       </div>
     </div>
   );
 };
 
-export default Footer;
+export default AppWrap(MotionWrap(Footer, ""), "contact", "relative", "hidden");

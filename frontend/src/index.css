@@ -9,3 +9,6 @@
   --font-base: "SF UI Display", sans-serif;
   --gradient-header: ;
 }
+/* :target {
+  display: block;
+} */

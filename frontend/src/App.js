@@ -11,8 +11,8 @@ import Work from "./containers/Work";
 function App() {
   return (
     <div className="App">
+
       <section className="xl:min-h-full min-h-screen section-gradient">
-        <NavBar />
         <Header />
       </section>
       <About />

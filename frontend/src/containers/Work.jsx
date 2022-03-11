@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import WorkContainer from "../components/WorkContainer";
 import { client, urlFor } from "../client";
+import { AppWrap, MotionWrap } from "../wrapper";
+import { motion } from "framer-motion";
 
 const Work = () => {
   const [works, setWorks] = useState([]);
@@ -12,7 +14,7 @@ const Work = () => {
   }, []);
 
   let portfolio = [];
-  works.forEach((work) => portfolio = (work.works));
+  works.forEach((work) => (portfolio = work.works));
 
   return (
     <section
@@ -20,15 +22,21 @@ const Work = () => {
       className="px-4 py-12 md:py-24 md:px-24 lg:px-44 xl:min-h-full min-h-screen bg-purple-50"
     >
       {works.map((title) => (
-        <h1
+        <motion.h1
+          whileHover={{ opacity: [0, 1] }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
           key={title}
           className="sm:px-0 px-4 mb-12 text-left lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-extrabold text-blue-600"
         >
           {title.section}
-        </h1>
+        </motion.h1>
       ))}
 
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6">
+      <motion.div
+        whileHover={{ opacity: [0, 1] }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className="grid lg:grid-cols-3 md:grid-cols-2 gap-6"
+      >
         {portfolio?.map((work, i) => (
           <WorkContainer
             key={i}
@@ -41,9 +49,9 @@ const Work = () => {
             gitlink={work.gitLink}
           />
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };
 
-export default Work;
+export default AppWrap(MotionWrap(Work, ""), "projects", "relative", "hidden");
